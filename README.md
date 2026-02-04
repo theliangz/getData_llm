@@ -1,4 +1,4 @@
-# getDataFromWrenAI
+# getData
 
 基于 LLM 和向量检索的 NL2SQL (Natural Language to SQL) 服务。
 
