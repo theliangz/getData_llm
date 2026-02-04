@@ -1,0 +1,80 @@
+[2025-12-22 15:42:28] [INFO] [getDataFromWrenAI.core.llm_client] LLM client initialized successfully
+[2025-12-22 15:42:28] [INFO] [getDataFromWrenAI.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 15:42:38] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 15:42:45] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 15:42:46] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Loading schema from ClickHouse database: default
+[2025-12-22 15:42:50] [WARNING] [urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=0, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000270DB0E23C0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')': /?
+[2025-12-22 15:43:12] [INFO] [getDataFromWrenAI.core.llm_client] LLM client initialized successfully
+[2025-12-22 15:43:12] [INFO] [getDataFromWrenAI.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 15:43:20] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 15:43:23] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 15:43:25] [INFO] [getDataFromWrenAI.service.schema_index_service_refactored] Loading schema from ClickHouse database: default
+[2025-12-22 15:43:39] [INFO] [getDataFromWrenAI.core.vector_store] Disconnected from Milvus
+[2025-12-22 17:44:09] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 17:44:09] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 17:44:09] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 17:44:09] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 17:44:09] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: default
+[2025-12-22 17:48:53] [INFO] [src.core.vector_store] Disconnected from Milvus
+[2025-12-22 17:49:04] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 17:49:04] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 17:49:04] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 17:49:04] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 17:49:04] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: acdmhfe
+[2025-12-22 17:49:36] [INFO] [src.service.schema_index_service_refactored] Loaded 106 schema documents from 3 tables
+[2025-12-22 17:49:36] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for schema documents
+[2025-12-22 17:49:41] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 17:49:41] [INFO] [src.core.vector_store] Collection schema_collection already exists
+[2025-12-22 17:49:41] [ERROR] [src.core.vector_store] Failed to upsert documents: <DataNotMatchException: (code=1, message=The data doesn't match with schema fields, expect 3 list, got 4)>
+[2025-12-22 17:49:41] [ERROR] [src.service.schema_index_service_refactored] Failed to build schema index: Failed to upsert documents: <DataNotMatchException: (code=1, message=The data doesn't match with schema fields, expect 3 list, got 4)>
+[2025-12-22 17:49:41] [ERROR] [src.service.schema_index_service_refactored] Failed to build indexes: Failed to build schema index: Failed to upsert documents: <DataNotMatchException: (code=1, message=The data doesn't match with schema fields, expect 3 list, got 4)>
+[2025-12-22 17:49:41] [INFO] [src.core.vector_store] Disconnected from Milvus
+[2025-12-22 17:50:47] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 17:50:47] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 17:50:47] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 17:50:47] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 17:50:51] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: acdmhfe
+[2025-12-22 17:50:53] [INFO] [src.service.schema_index_service_refactored] Loaded 106 schema documents from 3 tables
+[2025-12-22 17:51:00] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for schema documents
+[2025-12-22 17:51:08] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 17:51:16] [INFO] [src.core.vector_store] Collection schema_collection already exists
+[2025-12-22 17:56:44] [INFO] [src.core.vector_store] Disconnected from Milvus
+[2025-12-22 17:56:55] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 17:56:55] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 17:56:55] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 17:56:55] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 17:56:59] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: acdmhfe
+[2025-12-22 17:57:01] [INFO] [src.service.schema_index_service_refactored] Loaded 106 schema documents from 3 tables
+[2025-12-22 17:57:02] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for schema documents
+[2025-12-22 17:57:08] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 17:57:09] [INFO] [src.core.vector_store] Collection schema_collection already exists
+[2025-12-22 18:00:07] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 18:00:07] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 18:00:07] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 18:00:07] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 18:00:11] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: acdmhfe
+[2025-12-22 18:00:13] [INFO] [src.service.schema_index_service_refactored] Loaded 106 schema documents from 3 tables
+[2025-12-22 18:00:21] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for schema documents
+[2025-12-22 18:00:25] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 18:01:35] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 18:01:49] [INFO] [src.core.vector_store] Collection schema_collection already exists
+[2025-12-22 18:05:13] [INFO] [src.core.llm_client] LLM client initialized successfully
+[2025-12-22 18:05:13] [INFO] [src.core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-22 18:05:13] [INFO] [src.service.schema_index_service_refactored] Starting index building process
+[2025-12-22 18:05:13] [INFO] [src.service.schema_index_service_refactored] Building schema index: schema_collection
+[2025-12-22 18:05:17] [INFO] [src.service.schema_index_service_refactored] Loading schema from ClickHouse database: acdmhfe
+[2025-12-22 18:05:19] [INFO] [src.service.schema_index_service_refactored] Loaded 106 schema documents from 3 tables
+[2025-12-22 18:05:31] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for schema documents
+[2025-12-22 18:05:36] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 18:05:59] [INFO] [src.core.vector_store] Created collection schema_collection with dimension 1536
+[2025-12-22 18:06:09] [INFO] [src.core.vector_store] Upserted 106 documents to collection schema_collection
+[2025-12-22 18:06:11] [INFO] [src.service.schema_index_service_refactored] Schema index built successfully: 106 documents in schema_collection
+[2025-12-22 18:06:16] [INFO] [src.service.schema_index_service_refactored] Building SQL pair index: sqlpair_collection
+[2025-12-22 18:06:16] [INFO] [src.service.schema_index_service_refactored] Generating embeddings for SQL pairs
+[2025-12-22 18:06:17] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-22 18:06:27] [INFO] [src.core.vector_store] Created collection sqlpair_collection with dimension 1536
+[2025-12-22 18:06:36] [INFO] [src.core.vector_store] Upserted 2 documents to collection sqlpair_collection
+[2025-12-22 18:06:50] [INFO] [src.core.vector_store] Upserted 2 documents to collection sqlpair_collection
+[2025-12-22 18:06:56] [INFO] [src.service.schema_index_service_refactored] SQL pair index built successfully: 2 documents in sqlpair_collection
+[2025-12-22 18:07:06] [INFO] [src.service.schema_index_service_refactored] Index building completed successfully
+[2025-12-22 18:07:09] [INFO] [src.core.vector_store] Disconnected from Milvus

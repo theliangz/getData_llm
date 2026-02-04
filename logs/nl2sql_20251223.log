@@ -1,0 +1,437 @@
+[2025-12-23 11:43:42] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 11:47:37] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 11:47:37] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 11:47:48] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 11:47:48] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 11:47:48] [INFO] [api.routes] Received query request: 查询12月份全国航班总量...
+[2025-12-23 11:47:48] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询12月份全国航班总量...
+[2025-12-23 11:47:48] [INFO] [service.query_service_refactored] Retrieving context for question: 查询12月份全国航班总量...
+[2025-12-23 11:47:49] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 11:47:50] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 11:47:51] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 11:47:52] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 11:47:52] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE (toUInt32("fdate" % 10000 / 100))...
+[2025-12-23 11:47:53] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 11:47:53] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 11:47:53] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 11:47:53] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 11:47:53] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 13:46:58] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 13:46:58] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 13:46:58] [INFO] [api.routes] Received query request: 查询11月份全国航班总量...
+[2025-12-23 13:46:58] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询11月份全国航班总量...
+[2025-12-23 13:46:58] [INFO] [service.query_service_refactored] Retrieving context for question: 查询11月份全国航班总量...
+[2025-12-23 13:46:59] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 13:46:59] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 13:47:01] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 13:47:02] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 13:47:02] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20241101
+  AND "fdate"...
+[2025-12-23 13:47:02] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 13:47:02] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 13:47:02] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 13:47:02] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 13:47:02] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 13:51:26] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 13:51:26] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 13:51:26] [INFO] [api.routes] Received query request: 查询12月份全国航班总量...
+[2025-12-23 13:51:26] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询12月份全国航班总量...
+[2025-12-23 13:51:26] [INFO] [service.query_service_refactored] Retrieving context for question: 查询12月份全国航班总量...
+[2025-12-23 13:51:27] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 13:51:27] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 13:51:29] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 13:51:30] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 13:51:30] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE toMonth(toDate("fdate")) = 12...
+[2025-12-23 13:51:30] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 13:51:30] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 13:51:30] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 13:51:30] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 13:51:30] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:01:01] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:01:10] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:01:11] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:01:20] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:01:22] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:01:30] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:01:32] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:02:50] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:02:52] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:04:30] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:04:31] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:04:43] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:04:44] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:08:38] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:08:43] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:08:54] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:08:55] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:08:55] [INFO] [api.routes] Received query request: 查询12月份全国航班总量...
+[2025-12-23 14:08:55] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询12月份全国航班总量...
+[2025-12-23 14:08:55] [INFO] [service.query_service_refactored] Retrieving context for question: 查询12月份全国航班总量...
+[2025-12-23 14:08:56] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:08:56] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:08:58] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:08:59] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:08:59] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20251201
+  AND "fdate"...
+[2025-12-23 14:08:59] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:08:59] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:08:59] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:08:59] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:08:59] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:09:17] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:09:17] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:09:17] [INFO] [api.routes] Received query request: 查询11月份全国航班总量...
+[2025-12-23 14:09:17] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询11月份全国航班总量...
+[2025-12-23 14:09:17] [INFO] [service.query_service_refactored] Retrieving context for question: 查询11月份全国航班总量...
+[2025-12-23 14:09:18] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:09:18] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:09:19] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:09:23] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:09:23] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20251101
+  AND "fdate"...
+[2025-12-23 14:09:23] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:09:23] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:09:23] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:09:23] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:09:23] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:09:50] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:09:50] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:09:50] [INFO] [api.routes] Received query request: 查询11月份全国航班总量...
+[2025-12-23 14:09:50] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询11月份全国航班总量...
+[2025-12-23 14:09:50] [INFO] [service.query_service_refactored] Retrieving context for question: 查询11月份全国航班总量...
+[2025-12-23 14:09:50] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:09:51] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:09:53] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:09:54] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:09:54] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20251101
+  AND "fdate"...
+[2025-12-23 14:09:54] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:09:54] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:09:54] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:09:54] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:09:54] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:10:11] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:10:11] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:10:11] [INFO] [api.routes] Received query request: 查询华东地区双机场城市航班量...
+[2025-12-23 14:10:11] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询华东地区双机场城市航班量...
+[2025-12-23 14:10:11] [INFO] [service.query_service_refactored] Retrieving context for question: 查询华东地区双机场城市航班量...
+[2025-12-23 14:10:12] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:10:12] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:10:15] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:10:16] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:10:16] [INFO] [service.query_service_refactored] Generated SQL: SELECT 
+    COUNT(*) AS flight_volume
+FROM 
+    "acdmhfe"."goms_flight" AS f
+INNER JOIN 
+    "acdmhf...
+[2025-12-23 14:10:16] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:10:17] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:10:17] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:10:17] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:10:17] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:10:40] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:10:40] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:10:40] [INFO] [api.routes] Received query request: 查询华东地区双机场城市...
+[2025-12-23 14:10:40] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询华东地区双机场城市...
+[2025-12-23 14:10:40] [INFO] [service.query_service_refactored] Retrieving context for question: 查询华东地区双机场城市...
+[2025-12-23 14:10:41] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:10:41] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:10:43] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:10:44] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:10:44] [INFO] [service.query_service_refactored] Generated SQL: SELECT "city_cn_name"
+FROM "acdmhfe"."goms_airport"
+WHERE "is_foreign" = 0
+  AND "domestic_zone" LIK...
+[2025-12-23 14:10:44] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:10:45] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:10:45] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:10:45] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:10:45] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:10:58] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:10:58] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:10:58] [INFO] [api.routes] Received query request: 查询华东地区双机场城市机场代码...
+[2025-12-23 14:10:58] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询华东地区双机场城市机场代码...
+[2025-12-23 14:10:58] [INFO] [service.query_service_refactored] Retrieving context for question: 查询华东地区双机场城市机场代码...
+[2025-12-23 14:10:59] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:10:59] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:11:01] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:11:02] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:11:02] [INFO] [service.query_service_refactored] Generated SQL: WITH city_airport_count AS (
+    SELECT 
+        "city_cn_name",
+        COUNT(*) AS airport_count
+ ...
+[2025-12-23 14:11:02] [WARNING] [core.sql_diagnosis] Non-SELECT statement detected
+[2025-12-23 14:11:02] [INFO] [service.query_service_refactored] Fixing SQL (attempt 1/2)
+[2025-12-23 14:11:07] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:11:07] [INFO] [service.query_service_refactored] Fixed SQL: SELECT 
+    g."city_cn_name",
+    g."airport_iata",
+    g."airport_icao"
+FROM 
+    "acdmhfe"."goms_a...
+[2025-12-23 14:11:08] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:11:08] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:11:08] [INFO] [core.database] Query executed successfully, returned 4 rows
+[2025-12-23 14:11:08] [INFO] [service.query_service_refactored] Query executed successfully, returned 4 rows
+[2025-12-23 14:11:08] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:11:47] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:11:47] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:11:47] [INFO] [api.routes] Received query request: 查询上个月上海机场航班量...
+[2025-12-23 14:11:47] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询上个月上海机场航班量...
+[2025-12-23 14:11:47] [INFO] [service.query_service_refactored] Retrieving context for question: 查询上个月上海机场航班量...
+[2025-12-23 14:11:48] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:11:49] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:11:51] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:11:52] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:11:52] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_volume
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20251101
+  AND "fdate...
+[2025-12-23 14:11:52] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:11:52] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:11:52] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:11:52] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:11:52] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:14:12] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:14:43] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:14:44] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:15:01] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:15:03] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:16:18] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:16:20] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:16:21] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:17:21] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:17:25] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:17:25] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:17:25] [INFO] [api.routes] Received query request: 查询上个月上海机场航班量...
+[2025-12-23 14:17:25] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询上个月上海机场航班量...
+[2025-12-23 14:17:25] [INFO] [service.query_service_refactored] Retrieving context for question: 查询上个月上海机场航班量...
+[2025-12-23 14:17:26] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:17:27] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:17:29] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:17:29] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:17:29] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_volume
+FROM "acdmhfe"."goms_flight" AS f
+WHERE (
+    f."forg" IN (
+       ...
+[2025-12-23 14:17:29] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:17:30] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:17:30] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) AS flight_volume
+FROM "acdmhfe"."goms_flight" AS f
+WHERE (
+    f."forg" IN (
+        SELECT "airport_iata"
+        FROM "acdmhfe"."goms_airport"
+        WHERE "city_cn_name" = '上海'
+    )
+    OR f."fdst" IN (
+        SELECT "airport_iata"
+        FROM "acdmhfe"."goms_airport"
+        WHERE "city_cn_name" = '上海'
+    )
+)
+AND f."fdate" >= 20251101
+AND f."fdate" <= 20251130
+[2025-12-23 14:17:30] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:17:30] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:17:30] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 14:20:30] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:20:31] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:20:33] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:20:37] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:20:39] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:21:01] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:21:02] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:21:18] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:21:20] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:21:34] [INFO] [main] NL2SQL service shutting down...
+[2025-12-23 14:21:36] [INFO] [main] NL2SQL service starting up...
+[2025-12-23 14:21:37] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 14:21:37] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 14:21:37] [INFO] [api.routes] Received query request: 查询上个月上海机场航班量...
+[2025-12-23 14:21:37] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 查询上个月上海机场航班量...
+[2025-12-23 14:21:37] [INFO] [service.query_service_refactored] Retrieving context for question: 查询上个月上海机场航班量...
+[2025-12-23 14:21:38] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 14:21:38] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 14:21:40] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:21:42] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 14:21:42] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight" AS f
+INNER JOIN "acdmhfe"."goms_airport...
+[2025-12-23 14:21:42] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 14:21:42] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 14:21:42] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight" AS f
+INNER JOIN "acdmhfe"."goms_airport" AS a
+    ON (f."forg" = a."airport_iata" OR f."fdst" = a."airport_iata")
+WHERE a."city_cn_name" = '上海'
+  AND f."fdate" >= 20251101
+  AND f."fdate" <= 20251130
+[2025-12-23 14:21:42] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 14:21:42] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 14:21:42] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 16:54:06] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 16:54:06] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 16:54:06] [INFO] [api.routes] Received query request: 2024年迪拜国际机场旅客吞吐量...
+[2025-12-23 16:54:06] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 2024年迪拜国际机场旅客吞吐量...
+[2025-12-23 16:54:06] [INFO] [service.query_service_refactored] Retrieving context for question: 2024年迪拜国际机场旅客吞吐量...
+[2025-12-23 16:54:07] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 16:54:07] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 16:54:09] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 16:54:10] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 16:54:10] [INFO] [service.query_service_refactored] Generated SQL: SELECT 
+    COUNT(*) AS flight_count
+FROM 
+    "acdmhfe"."goms_flight" AS f
+INNER JOIN 
+    "acdmhfe...
+[2025-12-23 16:54:10] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 16:54:10] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 16:54:10] [INFO] [core.database] Executing SQL (aggregate): SELECT 
+    COUNT(*) AS flight_count
+FROM 
+    "acdmhfe"."goms_flight" AS f
+INNER JOIN 
+    "acdmhfe"."goms_airport" AS a 
+ON 
+    f."forg" = a."airport_iata" OR f."fdst" = a."airport_iata"
+WHERE 
+    (a."airport_iata" = 'DXB' OR a."airport_icao" = 'OMDB')
+    AND toDate(f."fdate", 'UTC') >= '2024-01-01'
+    AND toDate(f."fdate", 'UTC') < '2025-01-01'
+[2025-12-23 16:54:10] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 16:54:10] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 16:54:10] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 16:54:51] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 16:54:51] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 16:54:51] [INFO] [api.routes] Received query request: 2024年迪拜国际机场航班数量...
+[2025-12-23 16:54:51] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 2024年迪拜国际机场航班数量...
+[2025-12-23 16:54:51] [INFO] [service.query_service_refactored] Retrieving context for question: 2024年迪拜国际机场航班数量...
+[2025-12-23 16:54:51] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 16:54:52] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 16:54:54] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 16:54:55] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 16:54:55] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) 
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20240101 
+  AND "fdate" <= 20241231 
+...
+[2025-12-23 16:54:55] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 16:54:55] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 16:54:55] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) 
+FROM "acdmhfe"."goms_flight"
+WHERE "fdate" >= 20240101 
+  AND "fdate" <= 20241231 
+  AND ("forg" = 'DXB' OR "fdst" = 'DXB')
+[2025-12-23 16:54:55] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 16:54:55] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 16:54:55] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-23 17:20:19] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-23 17:20:19] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-23 17:20:19] [INFO] [api.routes] Received query request: 2024年全国机场航班量...
+[2025-12-23 17:20:19] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 2024年全国机场航班量...
+[2025-12-23 17:20:19] [INFO] [service.query_service_refactored] Retrieving context for question: 2024年全国机场航班量...
+[2025-12-23 17:20:20] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-23 17:20:20] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-23 17:20:22] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 17:20:23] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 17:20:23] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight" AS f
+WHERE f."fdate" >= toUInt32(toDate...
+[2025-12-23 17:20:24] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-23 17:20:24] [ERROR] [core.database] SQL explanation failed: Received ClickHouse exception, code: 1, server response: Code: 1. DB::Exception: Resolve identifier 'f.forg' from parent scope only supported for constants and CTE. Actual f.forg node type COLUMN. In scope (SELECT 1 FROM acdmhfe.goms_airport AS a WHERE (a.airport_iata = f.forg) AND (a.is_foreign = 0)). (UNSUPPORTED_METHOD) (version 24.12.6.70 (official build)) (for url http://47.114.78.74:18123)
+[2025-12-23 17:20:24] [WARNING] [core.sql_diagnosis] SQL EXPLAIN failed: SQL explanation failed: Received ClickHouse exception, code: 1, server response: Code: 1. DB::Exception: Resolve identifier 'f.forg' from parent scope only supported for constants and CTE. Actual f.forg node type COLUMN. In scope (SELECT 1 FROM acdmhfe.goms_airport AS a WHERE (a.airport_iata = f.forg) AND (a.is_foreign = 0)). (UNSUPPORTED_METHOD) (version 24.12.6.70 (official build)) (for url http://47.114.78.74:18123)
+[2025-12-23 17:20:24] [INFO] [service.query_service_refactored] Fixing SQL (attempt 1/2)
+[2025-12-23 17:20:25] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 17:20:25] [INFO] [service.query_service_refactored] Fixed SQL: WITH domestic_airports AS (
+    SELECT "airport_iata"
+    FROM "acdmhfe"."goms_airport"
+    WHERE "i...
+[2025-12-23 17:20:25] [WARNING] [core.sql_diagnosis] Non-SELECT statement detected
+[2025-12-23 17:20:25] [INFO] [service.query_service_refactored] Fixing SQL (attempt 2/2)
+[2025-12-23 17:20:25] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-23 17:20:25] [INFO] [service.query_service_refactored] Fixed SQL: SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight" AS f
+WHERE f."fdate" >= toUInt32(toDate...
+[2025-12-23 17:20:25] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-23 17:20:25] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) AS flight_count
+FROM "acdmhfe"."goms_flight" AS f
+WHERE f."fdate" >= toUInt32(toDate('2024-01-01'))
+  AND f."fdate" < toUInt32(toDate('2025-01-01'))
+  AND (
+    f."forg" IN (
+        SELECT "airport_iata"
+        FROM "acdmhfe"."goms_airport"
+        WHERE "is_foreign" = 0
+    )
+    OR f."fdst" IN (
+        SELECT "airport_iata"
+        FROM "acdmhfe"."goms_airport"
+        WHERE "is_foreign" = 0
+    )
+  )
+[2025-12-23 17:20:25] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-23 17:20:25] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-23 17:20:25] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-24 11:08:12] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-24 11:08:12] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-24 11:08:12] [INFO] [api.routes] Received query request: 2024年全国机场航班量...
+[2025-12-24 11:08:12] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 2024年全国机场航班量...
+[2025-12-24 11:08:12] [INFO] [service.query_service_refactored] Retrieving context for question: 2024年全国机场航班量...
+[2025-12-24 11:08:13] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-24 11:08:13] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-24 11:08:16] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-24 11:08:17] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-24 11:08:17] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) AS flight_volume
+FROM "acdmhfe"."goms_flight" AS f
+LEFT JOIN "acdmhfe"."goms_airport...
+[2025-12-24 11:08:17] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-24 11:08:17] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-24 11:08:17] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) AS flight_volume
+FROM "acdmhfe"."goms_flight" AS f
+LEFT JOIN "acdmhfe"."goms_airport" AS org ON f."forg" = org."airport_iata"
+LEFT JOIN "acdmhfe"."goms_airport" AS dst ON f."fdst" = dst."airport_iata"
+WHERE f."fdate" >= 20240101
+  AND f."fdate" <= 20241231
+  AND (org."is_foreign" = 0 OR dst."is_foreign" = 0)
+[2025-12-24 11:08:17] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-24 11:08:17] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-24 11:08:17] [INFO] [core.vector_store] Disconnected from Milvus
+[2025-12-24 11:13:12] [INFO] [core.llm_client] LLM client initialized successfully
+[2025-12-24 11:13:13] [INFO] [core.vector_store] Connected to Milvus at 47.114.78.74:19530
+[2025-12-24 11:13:13] [INFO] [api.routes] Received query request: 2025年10月份东航航班数量...
+[2025-12-24 11:13:13] [INFO] [service.query_service_refactored] Starting NL2SQL pipeline for question: 2025年10月份东航航班数量...
+[2025-12-24 11:13:13] [INFO] [service.query_service_refactored] Retrieving context for question: 2025年10月份东航航班数量...
+[2025-12-24 11:13:14] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/embeddings "HTTP/1.1 200 "
+[2025-12-24 11:13:14] [INFO] [service.query_service_refactored] Retrieved 5 schema snippets and 4 SQL examples
+[2025-12-24 11:13:16] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-24 11:13:17] [INFO] [httpx] HTTP Request: POST https://aigateway.variflight.com/api/chat/completions "HTTP/1.1 200 "
+[2025-12-24 11:13:17] [INFO] [service.query_service_refactored] Generated SQL: SELECT COUNT(*) 
+FROM "acdmhfe"."goms_flight"
+WHERE "airlines_iata" = 'MU'
+  AND "fdate" >= 20251001...
+[2025-12-24 11:13:17] [INFO] [core.database] Connected to ClickHouse at 47.114.78.74:18123
+[2025-12-24 11:13:17] [INFO] [core.sql_diagnosis] SQL diagnosis passed
+[2025-12-24 11:13:17] [INFO] [core.database] Executing SQL (aggregate): SELECT COUNT(*) 
+FROM "acdmhfe"."goms_flight"
+WHERE "airlines_iata" = 'MU'
+  AND "fdate" >= 20251001
+  AND "fdate" <= 20251031
+[2025-12-24 11:13:17] [INFO] [core.database] Query executed successfully, returned 1 rows
+[2025-12-24 11:13:17] [INFO] [service.query_service_refactored] Query executed successfully, returned 1 rows
+[2025-12-24 11:13:17] [INFO] [core.vector_store] Disconnected from Milvus
